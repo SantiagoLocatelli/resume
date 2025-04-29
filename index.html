@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta tags for character set, compatibility, and responsive design -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Portfolio</title>
-    <!-- Link to external CSS file -->
+    <meta name="description" content="Portfolio of Santiago Locatelli, Full Stack Developer passionate about learning and creating." />
+    <meta name="author" content="Santiago Locatelli" />
+    <title>Santiago Locatelli</title>
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
@@ -14,34 +14,16 @@
     <nav class="nav">
       <div class="container">
         <div class="nav-row">
-          <!-- Logo with link to the homepage -->
-          <a href="./index.html" class="logo"
-            ><strong>Your</strong> portfolio</a
-          >
+          <a href="./index.html" class="logo"><strong>Santiago Locatelli</strong></a>
 
-          <!-- Dark mode toggle button -->
-          <button class="dark-mode-btn">
-            <!-- Icons for light and dark mode -->
-            <img
-              src="./img/icons/sun.svg"
-              alt="Light mode"
-              class="dark-mode-btn__icon"
-            />
-            <img
-              src="./img/icons/moon.svg"
-              alt="Dark mode"
-              class="dark-mode-btn__icon"
-            />
+          <button class="dark-mode-btn" aria-label="Toggle dark mode">
+            <img src="./img/icons/sun.svg" alt="Light mode" class="dark-mode-btn__icon" />
+            <img src="./img/icons/moon.svg" alt="Dark mode" class="dark-mode-btn__icon" />
           </button>
 
-          <!-- Navigation links -->
           <ul class="nav-list">
             <li class="nav-list__item">
-              <a
-                href="./index.html"
-                class="nav-list__link nav-list__link--active"
-                >Home</a
-              >
+              <a href="./index.html" class="nav-list__link nav-list__link--active">Home</a>
             </li>
             <li class="nav-list__item">
               <a href="./projects.html" class="nav-list__link">Projects</a>
@@ -58,15 +40,13 @@
     <header class="header">
       <div class="header__wrapper">
         <h1 class="header__title">
-          <strong>Hi, my name is <em>Bainda</em></strong
-          ><br />
-          a frontend developer
+          <strong>Hello there, my name is <em>Santiago</em></strong><br />
+          a Full Stack Developer passionate about learning, teaching, and building solutions.
         </h1>
         <div class="header__text">
-          <p>with passion for learning and creating.</p>
+          <p>Always pushing boundaries through knowledge and creativity.</p>
         </div>
-        <!-- Link to download CV -->
-        <a href="./path/to/your-cv.pdf" class="btn" download>Download CV</a>
+        <a href="./assets/Santiago_Locatelli_CV.pdf" class="btn" download aria-label="Download Santiago Locatelli's CV">Download CV</a>
       </div>
     </header>
 
@@ -74,18 +54,17 @@
     <main class="section">
       <div class="container">
         <ul class="content-list">
-          <!-- Frontend skills list -->
           <li class="content-list__item">
             <h2 class="title-2">Frontend</h2>
-            <p>
-              JavaScript, TypeScript, ReactJS, Angular, Redux, HTML, CSS, Scss,
-              NPM, BootStrap, MaterialUI, Yarn, TailwindCSS, StyledComponents
-            </p>
+            <p>JavaScript, React, React Native, Redux, Bootstrap, HTML, CSS, JQuery</p>
           </li>
-          <!-- Backend skills list -->
           <li class="content-list__item">
             <h2 class="title-2">Backend</h2>
-            <p>NodeJS, MySQL, MongoDB, PHP, Laravel</p>
+            <p>Python (Flask, SQLAlchemy), C#, Entity Framework, .NET Framework, SQL (PostgreSQL, MySQL, Oracle, SQLServer)</p>
+          </li>
+          <li class="content-list__item">
+            <h2 class="title-2">Other Technologies</h2>
+            <p>Golang, Ruby, C, C++, GitHub, GitLab, Google Cloud Services, Azure</p>
           </li>
         </ul>
       </div>
@@ -95,35 +74,25 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__wrapper">
-          <!-- Social media links -->
           <ul class="social">
             <li class="social__item">
-              <a href="#!"><img src="./img/icons/vk.svg" alt="Link" /></a>
+              <a href="https://github.com/SantiagoLocatelli" target="_blank" aria-label="GitHub profile">
+                <img src="./img/icons/gitHub.svg" alt="GitHub" />
+              </a>
             </li>
             <li class="social__item">
-              <a href="#!"
-                ><img src="./img/icons/instagram.svg" alt="Link"
-              /></a>
-            </li>
-            <li class="social__item">
-              <a href="#!"><img src="./img/icons/twitter.svg" alt="Link" /></a>
-            </li>
-            <li class="social__item">
-              <a href="#!"><img src="./img/icons/gitHub.svg" alt="Link" /></a>
-            </li>
-            <li class="social__item">
-              <a href="#!"><img src="./img/icons/linkedIn.svg" alt="Link" /></a>
+              <a href="https://www.linkedin.com/in/santiago-locatelli/" target="_blank" aria-label="LinkedIn profile">
+                <img src="./img/icons/linkedIn.svg" alt="LinkedIn" />
+              </a>
             </li>
           </ul>
-          <!-- Copyright information -->
           <div class="copyright">
-            <p>© 2025 Bainda</p>
+            <p>© 2025 Santiago Locatelli. All rights reserved.</p>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Link to external JavaScript file -->
     <script src="./js/main.js"></script>
   </body>
 </html>
