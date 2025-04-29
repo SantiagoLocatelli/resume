@@ -41,7 +41,7 @@
       <div class="header__wrapper">
         <h1 class="header__title">
           <strong>Hello there, my name is <em>Santiago</em></strong><br />
-          a Full Stack Developer passionate about learning, teaching, and building solutions.
+          an All-round Developer passionate about learning, teaching, and building solutions.
         </h1>
         <div class="header__text">
           <p>Always pushing boundaries through knowledge and creativity.</p>
@@ -70,29 +70,14 @@
       </div>
     </main>
 
-    <!-- Footer section -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__wrapper">
-          <ul class="social">
-            <li class="social__item">
-              <a href="https://github.com/SantiagoLocatelli" target="_blank" aria-label="GitHub profile">
-                <img src="./img/icons/gitHub.svg" alt="GitHub" />
-              </a>
-            </li>
-            <li class="social__item">
-              <a href="https://www.linkedin.com/in/santiago-locatelli/" target="_blank" aria-label="LinkedIn profile">
-                <img src="./img/icons/linkedIn.svg" alt="LinkedIn" />
-              </a>
-            </li>
-          </ul>
-          <div class="copyright">
-            <p>© 2025 Santiago Locatelli. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
+    <div id="footer-container"></div>
+    <script>
+      fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    </script>
     <script src="./js/main.js"></script>
   </body>
 </html>

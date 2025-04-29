@@ -82,25 +82,14 @@
       </div>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__wrapper">
-          <!-- Social media links -->
-          <ul class="social">
-            <li class="social__item">
-              <a href="#!"><img src="./img/icons/gitHub.svg" alt="Link" /></a>
-            </li>
-            <li class="social__item">
-              <a href="#!"><img src="./img/icons/linkedIn.svg" alt="Link" /></a>
-            </li>
-          </ul>
-          <!-- Copyright information -->
-          <div class="copyright">
-            <p>© 2025 Santiago Locatelli. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <div id="footer-container"></div>
+    <script>
+      fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+    </script>
 
     <!-- Link to external JavaScript file -->
     <script src="./js/main.js"></script>
