@@ -72,7 +72,7 @@ body {
 }
 
 .section {
-  padding: 70px 0;
+  padding: 35px 0;
 }
 
 .title-1 {
@@ -370,12 +370,13 @@ body {
 
 .content-list {
   margin: 0 auto;
-  max-width: 570px;
+  /* max-width: 570px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 40px;
   text-align: center;
+  margin: 0 5em;
 }
 
 .content-list a {
@@ -483,6 +484,8 @@ body {
 
   .content-list__item {
     font-size: 16px;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   /* Footer */
@@ -524,3 +527,49 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #4d4d4d;
 }
+.experience-block {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-title {
+  font-weight: 600;
+  color: #838383;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.experience-item p {
+  margin: 0;
+  color: #a5a5a5;
+  line-height: 1.6;
+}
+
+.whoami__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.whoami__photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00ffc8;
+}
+
+.whoami__text {
+  max-width: 100%;
+}
+
