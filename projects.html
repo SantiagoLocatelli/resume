@@ -1,119 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta tags for character set, compatibility, and responsive design -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Santiago Locatelli</title>
-    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <!-- Navigation bar -->
     <nav class="nav">
       <div class="container">
         <div class="nav-row">
-          <!-- Logo with link to the homepage -->
-          <a href="./index.html" class="logo"
-            ><strong>Santiago Locatelli</strong></a
-          >
-
-          <!-- Dark mode toggle button -->
+          <a href="./index.html" class="logo"><strong>Santiago Locatelli</strong></a>
           <button class="dark-mode-btn">
-            <!-- Icons for light and dark mode -->
-            <img
-              src="./img/icons/sun.svg"
-              alt="Light mode"
-              class="dark-mode-btn__icon"
-            />
-            <img
-              src="./img/icons/moon.svg"
-              alt="Dark mode"
-              class="dark-mode-btn__icon"
-            />
+            <img src="./img/icons/sun.svg" alt="Light mode" class="dark-mode-btn__icon" />
+            <img src="./img/icons/moon.svg" alt="Dark mode" class="dark-mode-btn__icon" />
           </button>
-
-          <!-- Navigation links -->
           <ul class="nav-list">
-            <li class="nav-list__item">
-              <a href="./index.html" class="nav-list__link">Home</a>
-            </li>
-            <li class="nav-list__item">
-              <a
-                href="./projects.html"
-                class="nav-list__link nav-list__link--active"
-                >Projects</a
-              >
-            </li>
-            <li class="nav-list__item">
-              <a href="./contacts.html" class="nav-list__link">Contacts</a>
-            </li>
+            <li class="nav-list__item"><a href="./index.html" class="nav-list__link">Home</a></li>
+            <li class="nav-list__item"><a href="./projects.html" class="nav-list__link nav-list__link--active">Projects</a></li>
+            <li class="nav-list__item"><a href="./contacts.html" class="nav-list__link">Contacts</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Main content section -->
     <main class="section">
       <div class="container">
         <h2 class="title-1">Projects</h2>
-        <!-- List of projects -->
         <ul class="projects">
-          <!-- Individual project -->
           <li class="project">
-            <a href="./project-page.html">
-              <img
-                src="./img/projects/01.jpg"
-                alt="Project img"
-                class="project__img"
-              />
-              <h3 class="project__title">Gaming streaming portal</h3>
+            <a href="https://github.com/SantiagoLocatelli/Counter-Strike-2D" target="_blank" class="project__link">
+              <img src="./img/projects/cs2d.png" alt="Counter-Strike 2D" class="project__img" />
+              <h3 class="project__title">Counter-Strike 2D</h3>
             </a>
           </li>
           <li class="project">
-            <a href="./project-page.html">
-              <img
-                src="./img/projects/02.jpg"
-                alt="Project img"
-                class="project__img"
-              />
-              <h3 class="project__title">Video service</h3>
+            <a href="https://www.actionfintech.com/" target="_blank" class="project__link">
+              <img src="./img/projects/actionfintech_cover.jpg" alt="Fintech Platform" class="project__img" />
+              <h3 class="project__title">Fintech System Maintenance</h3>
             </a>
           </li>
           <li class="project">
-            <a href="./project-page.html">
-              <img
-                src="./img/projects/03.jpg"
-                alt="Project img"
-                class="project__img"
-              />
-              <h3 class="project__title">Video portal</h3>
+            <a href="https://www.tramites.catastro.misiones.gov.ar/login" target="_blank" class="project__link">
+              <img src="./img/projects/cdg.png" alt="Government Platform" class="project__img" />
+              <h3 class="project__title">Cadastre Management Platform</h3>
             </a>
           </li>
           <li class="project">
-            <img
-              src="./img/projects/04.jpg"
-              alt="Project img"
-              class="project__img"
-            />
-            <h3 class="project__title">Dating app</h3>
+            <a href="https://www.tdi.com.ar/servicios?id=sigedu" target="_blank" class="project__link">
+              <img src="./img/projects/BANNER_SIGEDU.webp" alt="University System" class="project__img" />
+              <h3 class="project__title">University Platform Migration</h3>
+            </a>
           </li>
           <li class="project">
-            <img
-              src="./img/projects/05.jpg"
-              alt="Project img"
-              class="project__img"
-            />
-            <h3 class="project__title">Landing</h3>
-          </li>
-          <li class="project">
-            <img
-              src="./img/projects/06.jpg"
-              alt="Project img"
-              class="project__img"
-            />
-            <h3 class="project__title">Gaming community</h3>
+            <img src="./img/projects/logo_institucion.png" alt="Teaching Contributions" class="project__img" />
+            <h3 class="project__title">University-Level Teaching & Course development</h3>
           </li>
         </ul>
       </div>
@@ -127,8 +69,6 @@
           document.getElementById("footer-container").innerHTML = data;
         });
     </script>
-
-    <!-- Link to external JavaScript file -->
     <script src="./js/main.js"></script>
   </body>
 </html>
