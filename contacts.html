@@ -11,48 +11,7 @@
   </head>
   <body>
     <!-- Navigation bar -->
-    <nav class="nav">
-      <div class="container">
-        <div class="nav-row">
-          <!-- Logo with link to the homepage -->
-          <a href="./index.html" class="logo"
-            ><strong>Santiago Locatelli</strong></a
-          >
-
-          <!-- Dark mode toggle button -->
-          <button class="dark-mode-btn">
-            <!-- Icons for light and dark mode -->
-            <img
-              src="./img/icons/sun.svg"
-              alt="Light mode"
-              class="dark-mode-btn__icon"
-            />
-            <img
-              src="./img/icons/moon.svg"
-              alt="Dark mode"
-              class="dark-mode-btn__icon"
-            />
-          </button>
-
-          <!-- Navigation links -->
-          <ul class="nav-list">
-            <li class="nav-list__item">
-              <a href="./index.html" class="nav-list__link">Home</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="./projects.html" class="nav-list__link">Projects</a>
-            </li>
-            <li class="nav-list__item">
-              <a
-                href="./contacts.html"
-                class="nav-list__link nav-list__link--active"
-                >Contacts</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="navbar"></div>
 
     <!-- Main content section -->
     <main class="section">
@@ -84,10 +43,15 @@
     </main>
     <div id="footer-container"></div>
     <script>
-      fetch("footer.html")
+      fetch("/footer.html")
         .then(response => response.text())
         .then(data => {
           document.getElementById("footer-container").innerHTML = data;
+        });
+      fetch("/navbar.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("navbar").innerHTML = data;
         });
     </script>
 

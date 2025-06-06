@@ -7,22 +7,7 @@
     <link rel="stylesheet" href="../css/main.css" />
   </head>
   <body>
-    <nav class="nav">
-      <div class="container">
-        <div class="nav-row">
-          <a href="./index.html" class="logo"><strong>Santiago Locatelli</strong></a>
-          <button class="dark-mode-btn">
-            <img src="../img/icons/sun.svg" alt="Light mode" class="dark-mode-btn__icon" />
-            <img src="../img/icons/moon.svg" alt="Dark mode" class="dark-mode-btn__icon" />
-          </button>
-          <ul class="nav-list">
-            <li class="nav-list__item"><a href="./index.html" class="nav-list__link">Home</a></li>
-            <li class="nav-list__item"><a href="./projects.html" class="nav-list__link nav-list__link--active">Projects</a></li>
-            <li class="nav-list__item"><a href="./contacts.html" class="nav-list__link">Contacts</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div id="navbar"></div>
 
     <main class="section">
       <div class="container">
@@ -59,17 +44,20 @@
       </div>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__wrapper">
-          <div class="social">
-            <!-- Optional social icons -->
-          </div>
-          <div class="copyright">
-            <p>&copy; 2025 Santiago Locatelli. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <div id="footer-container"></div>
+    <script>
+      fetch("/footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-container").innerHTML = data;
+        });
+
+      fetch("/navbar.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("navbar").innerHTML = data;
+        }); 
+    </script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
