@@ -43,19 +43,14 @@
     </main>
 
     <div id="footer-container"></div>
+    <script src="./js/main.js"></script>
     <script>
       fetch("/footer.html")
         .then(response => response.text())
         .then(data => {
           document.getElementById("footer-container").innerHTML = data;
         });
-
-      fetch("/navbar.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("navbar").innerHTML = data;
-        }); 
+        loadNavbar();
     </script>
-    <script src="./js/main.js"></script>
   </body>
 </html>

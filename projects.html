@@ -50,30 +50,14 @@
     </main>
 
     <div id="footer-container"></div>
+    <script src="./js/main.js"></script>
     <script>
       fetch("/footer.html")
         .then(response => response.text())
         .then(data => {
           document.getElementById("footer-container").innerHTML = data;
         });
-
-      fetch("/navbar.html")
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById("navbar").innerHTML = data;
-
-          // Una vez que el navbar está insertado, ejecutar lógica para marcar el tab activa
-          const currentPath = window.location.pathname;
-          const navLinks = document.querySelectorAll(".nav-list__link");
-
-          navLinks.forEach(link => {
-            // Comparar el href del link con la ruta actual
-            if (currentPath.endsWith(link.getAttribute("href"))) {
-              link.classList.add("nav-list__link--active");
-            }
-          });
-        });
+        loadNavbar();
     </script>
-    <script src="./js/main.js"></script>
   </body>
 </html>

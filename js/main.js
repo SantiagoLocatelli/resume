@@ -52,3 +52,42 @@ if (someValue === userValue) {
 } else {
   console.log("False");
 }
+
+// load-navbar.js
+function loadNavbar(containerId = "navbar", navbarFile = "/navbar.html") {
+  fetch(navbarFile)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById(containerId).innerHTML = data;
+
+      highlightActiveLink();
+      setupDarkModeToggle();
+    });
+}
+
+function highlightActiveLink() {
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll(".nav-list__link");
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+    if ((currentPath === "/" && href === "index.html") || currentPath.endsWith(href)) {
+      link.classList.add("nav-list__link--active");
+    }
+  });
+}
+
+function setupDarkModeToggle() {
+  const darkModeBtn = document.querySelector(".dark-mode-btn");
+
+  if (darkModeBtn) {
+    darkModeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+    });
+  }
+
+  // Aplicar tema guardado
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+  }
+}
