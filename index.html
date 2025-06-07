@@ -35,7 +35,7 @@
           <li class="content-list__item whoami">
             <div class="whoami__wrapper whoami__vertical">
               <div class="profile-container">
-                <img src="./img/profile.jpeg" alt="Photo of Santiago Locatelli" class="whoami__photo profile-pic" />
+                <img src="./img/profile.jpeg" alt="Photo of Santiago Locatelli" class="whoami__photo profile-pic" id="profilePic" />
               </div>
 
               <div class="whoami__text">
@@ -61,8 +61,13 @@
     <div id="footer-container"></div>
     <script src="./js/main.js"></script>
     <script>
-        loadFooter();
-        loadNavbar();
+      loadFooter();
+      loadNavbar();
+      const profilePic = document.getElementById('profilePic');
+
+      profilePic.addEventListener('click', () => {
+        profilePic.classList.toggle('enlarged');
+      });
     </script>
   </body>
 </html>
