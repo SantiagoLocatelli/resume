@@ -54,7 +54,7 @@ if (someValue === userValue) {
 }
 
 // load-navbar.js
-function loadNavbar(containerId = "navbar", navbarFile = "/navbar.html") {
+function loadNavbar(containerId = "navbar", navbarFile = "/resume/navbar.html") {
   fetch(navbarFile)
     .then(response => response.text())
     .then(data => {
