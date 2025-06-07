@@ -53,6 +53,14 @@ if (someValue === userValue) {
   console.log("False");
 }
 
+function loadFooter(containerId = 'footer-container', footerFile = '/resume/footer.html') {
+  fetch(footerFile)
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById(containerId).innerHTML = data;
+    });
+}
+
 // load-navbar.js
 function loadNavbar(containerId = "navbar", navbarFile = "/resume/navbar.html") {
   fetch(navbarFile)
