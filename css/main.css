@@ -585,3 +585,25 @@ body {
 .index_text {
   font-size: larger;
 }
+
+.profile-container {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.3s ease, z-index 0.3s;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.profile-pic:active {
+  transform: scale(2.5);
+  z-index: 10;
+  position: relative;
+  cursor: pointer;
+}
