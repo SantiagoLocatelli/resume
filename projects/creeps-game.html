@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creeps Game</title>
+    <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <main class="section">
+      <div class="container">
+        <a href="../projects.html" class="btn-outline" style="margin-bottom: 2rem; display: inline-block;">← Back to Projects</a>
+        <div class="project-details">
+          <h1 class="title-1">Creeps Game</h1>
+          <img
+            src="../img/projects/creeps-game.png"
+            alt="Creeps Game Preview"
+            class="project-details__cover"
+            style="max-width: 400px;"
+          />
+          <div class="project-details__desc">
+            Creeps Game is a 2D pixel-art arcade game developed in Godot.
+            Players must survive against unpredictable "creeps" whose movements are procedurally generated,
+            offering a fresh challenge every round. The game was designed for web and runs entirely in-browser.
+          </div>
+          <ul class="content-list">
+            <li class="content-list__item">
+              <p><strong>Technologies:</strong> Godot Engine, GDScript, HTML5, GitHub Pages</p>
+            </li>
+            <li class="content-list__item">
+              <p><strong>Repository:</strong> <a href="https://github.com/SantiagoLocatelli/creeps-game" target="_blank">GitHub</a></p>
+            </li>
+            <li class="content-list__item">
+              <p>
+                The game architecture was built around modular design, allowing easy tweaking of enemy behavior and game difficulty.
+                Procedural logic was implemented using random and noise-based algorithms to govern enemy movement.
+                Assets were optimized for web delivery, and the game was deployed through GitHub Pages for instant access.
+                <br><br>
+                <!-- <a href="https://santiagolocatelli.github.io/creeps-game/" target="_blank" class="btn-play">▶ Play Creeps Game</a> -->
+                <!-- <strong>Play here:</strong> <a href="https://santiagolocatelli.github.io/creeps-game/" target="_blank">Creeps Game Web Version</a> -->
+            </p>
+            </li>
+            <li class="content-list__item">
+                <a href="https://santiagolocatelli.github.io/creeps-game/" target="_blank" class="btn-play-custom">Play</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="./js/main.js"></script>
+    <script>
+        loadFooter();
+        loadNavbar();
+    </script>
+  </body>
+</html>

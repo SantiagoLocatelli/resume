@@ -605,3 +605,21 @@ body {
   z-index: 10;
   position: relative;
 }
+
+.btn-play-custom {
+  display: inline-block;
+  font-size: 2rem;
+  padding: 1.4rem 2.5rem;
+  background-color: black; /* usa tu color principal */
+  color: #fff !important;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-play-custom:hover {
+  background-color: #005fcc; /* versión más oscura del acento */
+}
