@@ -49,32 +49,28 @@ function setupDarkModeToggle() {
     }
   };
   
-  if (someValue === userValue) {
-    console.log("True");
-  } else {
-    console.log("False");
-  }
 }
 
 function loadFooter(containerId = 'footer-container', footerFile = '/footer.html') {
-  const useRootFolder = isRunningOnGitHubPages();
-  footerFile = useRootFolder ? `/resume/${footerFile}` : footerFile;
-  fetch(footerFile)
+  const prefix = isRunningOnGitHubPages() ? '/resume' : '';
+  fetch(prefix + footerFile)
     .then(response => response.text())
     .then(data => {
+      if (prefix) data = data.replace(/src="\//g, `src="${prefix}/`);
       document.getElementById(containerId).innerHTML = data;
     });
 }
 
-// load-navbar.js
 function loadNavbar(containerId = "navbar", navbarFile = "/navbar.html") {
-  const useRootFolder = isRunningOnGitHubPages();
-  navbarFile = useRootFolder ? `/resume/${navbarFile}` : navbarFile;
-  fetch(navbarFile)
+  const prefix = isRunningOnGitHubPages() ? '/resume' : '';
+  fetch(prefix + navbarFile)
     .then(response => response.text())
     .then(data => {
+      if (prefix) {
+        data = data.replace(/href="\//g, `href="${prefix}/`);
+        data = data.replace(/src="\//g, `src="${prefix}/`);
+      }
       document.getElementById(containerId).innerHTML = data;
-
       setupDarkModeToggle();
     });
 }

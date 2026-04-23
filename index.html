@@ -65,8 +65,13 @@
       loadNavbar();
       const profilePic = document.getElementById('profilePic');
 
-      profilePic.addEventListener('click', () => {
+      profilePic.addEventListener('click', (e) => {
+        e.stopPropagation();
         profilePic.classList.toggle('enlarged');
+      });
+
+      document.addEventListener('click', () => {
+        profilePic.classList.remove('enlarged');
       });
     </script>
   </body>
