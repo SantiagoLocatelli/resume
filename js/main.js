@@ -61,6 +61,16 @@ function loadFooter(containerId = 'footer-container', footerFile = '/footer.html
     });
 }
 
+function setActiveNavLink() {
+  const path = window.location.pathname.replace(/^\/resume/, '');
+  document.querySelectorAll('.nav-list__link').forEach(link => {
+    const href = link.getAttribute('href').replace(/^\/resume/, '');
+    if (href === path || (href === '/index.html' && (path === '/' || path === ''))) {
+      link.classList.add('nav-list__link--active');
+    }
+  });
+}
+
 function loadNavbar(containerId = "navbar", navbarFile = "/navbar.html") {
   const prefix = isRunningOnGitHubPages() ? '/resume' : '';
   fetch(prefix + navbarFile)
@@ -72,6 +82,7 @@ function loadNavbar(containerId = "navbar", navbarFile = "/navbar.html") {
       }
       document.getElementById(containerId).innerHTML = data;
       setupDarkModeToggle();
+      setActiveNavLink();
     });
 }
 
